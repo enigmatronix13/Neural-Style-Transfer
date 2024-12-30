@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  backend:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./backend/uploads:/app/uploads  # Persist uploaded files
+    ports:
+      - "5000:5000"
+
+  frontend:
+    image: nginx:latest
+    volumes:
+      - ./frontend:/usr/share/nginx/html:ro  # Serve frontend files
+    ports:
+      - "8080:80"

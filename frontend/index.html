@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Style Transfer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎨 Image Style Transfer</h1>
+            <p>Upload an image and select a style to transform your image into a masterpiece!</p>
+        </header>
+        <main>
+            <form id="uploadForm">
+                <div class="file-input">
+                    <label for="imageUpload">Choose an Image:</label>
+                    <input type="file" id="imageUpload" accept="image/*">
+                </div>
+                <div class="file-input">
+                    <label for="styleUpload">Choose a Style Image:</label>
+                    <input type="file" id="styleUpload" accept="image/*">
+                </div>
+                <button type="submit" class="btn">Transform Image</button>
+            </form>
+            <div id="outputSection" class="output hidden">
+                <h2>🖼 Transformed Image</h2>
+                <img id="outputImage" alt="Styled Output">
+                <a id="downloadLink" download="styled_image.png" class="btn">Download</a>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0" target="_blank">Do not click me</a>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
